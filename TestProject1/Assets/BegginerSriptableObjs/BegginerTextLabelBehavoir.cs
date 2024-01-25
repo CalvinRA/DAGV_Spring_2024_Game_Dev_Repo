@@ -14,6 +14,11 @@ public class BegginerTextLabelBehavoir : MonoBehaviour
     public void Start()
     {
         lable = GetComponent<Text>();
+        UpdateLable();
+    }
+
+    public void UpdateLable()
+    {
         lable.text = dataObj.value.ToString(CultureInfo.InvariantCulture);
     }
 }
