@@ -253,7 +253,7 @@ Transform:
   m_GameObject: {fileID: 49912185}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.45, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -277,7 +277,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 49912191}
         m_TargetAssemblyTypeName: SpriteBehaviour, Assembly-CSharp
-        m_MethodName: ChagneRendererColor
+        m_MethodName: ChangeRendererColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: c6e6e3e07696e8a4aba77305e4b44f3b, type: 2}
@@ -405,6 +405,8 @@ GameObject:
   - component: {fileID: 1099772955}
   - component: {fileID: 1099772959}
   - component: {fileID: 1099772960}
+  - component: {fileID: 1099772961}
+  - component: {fileID: 1099772962}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -521,7 +523,7 @@ Transform:
   m_GameObject: {fileID: 1099772954}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.03, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -557,7 +559,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1099772960}
         m_TargetAssemblyTypeName: SpriteBehaviour, Assembly-CSharp
-        m_MethodName: ChagneRendererColor
+        m_MethodName: ChangeRendererColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: c6e6e3e07696e8a4aba77305e4b44f3b, type: 2}
@@ -594,6 +596,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e7a6a7dba8d714082ca23f218f2ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1099772961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099772954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58eae7a598d857943ad37f0eca8107d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggable: 0
+  startDragEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1099772962}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Up
+          m_BoolArgument: 0
+        m_CallState: 2
+  endDragEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1099772962}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Idle
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!95 &1099772962
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099772954}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8363bff9b17ec0148bb409cfa92d8b14, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1414091626
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +699,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1414091632}
         m_TargetAssemblyTypeName: SpriteBehaviour, Assembly-CSharp
-        m_MethodName: ChagneRendererColor
+        m_MethodName: ChangeRendererColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: fbd4175e3539cf94ea7253c51b259afb, type: 2}
