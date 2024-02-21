@@ -674,7 +674,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   runRepeat: 0
-  counterNum: {fileID: 0}
+  counterNum: {fileID: 11400000, guid: d8950b81b36eebb48877433de0b79e90, type: 2}
   seconds: 1
 --- !u!4 &1964867548
 Transform:
@@ -685,7 +685,7 @@ Transform:
   m_GameObject: {fileID: 1964867546}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 277.78973, y: 179.82549, z: -0.65744185}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
