@@ -2,12 +2,13 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MatchBehaviour : MonoBehaviour
+public class MatchBehaviour : IDContainterBehaviour
 {
-    public ID idObj;
+    
     public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
-    private IEnumerator OnTriggerEnter(Collider other)
+    public IEnumerator OnTriggerEnter(Collider other)
     {
+        Debug.Log("hit");
         var tempObj = other.GetComponent<IDContainterBehaviour>();
         if (tempObj == null) 
             yield break;

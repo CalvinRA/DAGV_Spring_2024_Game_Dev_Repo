@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class ColorIdDataList : ScriptableObject
+public class ColorIDDataList : ScriptableObject
 {
     public List<ColorID> colorIDList;
 
