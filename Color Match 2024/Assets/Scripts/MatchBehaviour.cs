@@ -6,7 +6,7 @@ public class MatchBehaviour : IDContainterBehaviour
 {
     
     public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
-    public IEnumerator OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
         Debug.Log("hit");
         var tempObj = other.GetComponent<IDContainterBehaviour>();
